@@ -6,6 +6,7 @@
 		var z1 ;
 		var title;
 		var speed;
+		var record=false;
 		
 var o = {
 	init: function(){
@@ -172,31 +173,36 @@ var o = {
 $(function(){ 
 	o.init(); 
 	//setTimeout(o.rotate, 5000);
-	focus(z1,0,title,1000);
-	unfocus(z1,0,title,2000);
-	focus(z4,3,title,1500);
-	unfocus(z4,3,title,3500);
-	focus(z3,2,title,2000);
-	unfocus(z3,2,title,4000);
-	focus(z2,1,title,2500);
-	unfocus(z2,1,title,4500);
-	focus(z5,4,title,3000);
-	unfocus(z5,4,title,5000);
+	focusAll();
 	
-	$('#maintext span').css( 'cursor', 'pointer' );
+$('#maintext span').css( 'cursor', 'pointer' );
 $('#maintext').css( 'cursor', 'pointer' );
 		
  $('#maintext tspan').click(function() {
- $("#diagram").css({ "position": "absolute"});
-	$('#diagram').animate({ top: '230px' },4000);
-	rotateAll();
+	 if (!record)
+	 {
+		 $("#diagram").css({ "position": "absolute"});
+		 $('#diagram').animate({ top: '230px' },4000);
+		 rotateAll();
+		 record=true;
+	}
+	else
+	{
+		z1.stop();
+	  
+		$('#diagram').animate({ top: '0' },4000);		
+		
+		 window.setInterval(function(){
+				$("#diagram").css({ "position": "initial"});
+				}, 4000);
+				
+		stopAnimation();
+		focusAll();
+		record=false;
+	}
 	});
 	
-	$('#maintext').click(function() {
- $("#diagram").css({ "position": "absolute"});
-	$('#diagram').animate({ top: '230px' },4000);
-   rotateAll();
-});
+	
 
 $('#circletext').click(function() {
  $("#diagram").css({ "position": "absolute"});
@@ -208,6 +214,29 @@ $('#circletext').click(function() {
 	
 
 });
+
+function stopAnimation()
+{
+	z1.stop();
+	z2.stop();
+	z3.stop();
+	z4.stop();
+	z5.stop();
+}
+
+function focusAll()
+{
+	focus(z1,0,title,1000);
+	unfocus(z1,0,title,2000);
+	focus(z4,3,title,1500);
+	unfocus(z4,3,title,3500);
+	focus(z3,2,title,2000);
+	unfocus(z3,2,title,4000);
+	focus(z2,1,title,2500);
+	unfocus(z2,1,title,4500);
+	focus(z5,4,title,3000);
+	unfocus(z5,4,title,5000);
+}
 
 function rotateAll()
 {
