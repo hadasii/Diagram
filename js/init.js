@@ -17,7 +17,17 @@ var o = {
 	},
 
 	diagram: function(){
-		var r = Raphael('diagram', 600, 600),
+	
+	var w = 600;
+	var h = 600;
+	var r = Raphael("diagram");
+	r.setViewBox(0,0,w,h,true);
+
+	var svg = document.querySelector("svg");
+	svg.removeAttribute("width");
+	svg.removeAttribute("height");
+
+		var /* r = Raphael('diagram', 600, 600), */
 			rad = 20,
 			defaultText = 'PLAY',
 			speed = 500;
@@ -181,8 +191,13 @@ $('#maintext').css( 'cursor', 'pointer' );
  $('#maintext tspan').click(function() {
 	 if (!record)
 	 {
-		 $("#diagram").css({ "position": "absolute"});
-		 $('#diagram').animate({ top: '230px' },4000);
+//$("#diagram").css({ "position": "absolute"});
+		// $('#diagram').animate({ top: '230px' },4000);
+		 $('#diagram').animate({
+        'marginTop' : "+=230px" //moves down
+        },2000);
+		
+		 
 		 rotateAll();
 		 record=true;
 	}
@@ -190,11 +205,14 @@ $('#maintext').css( 'cursor', 'pointer' );
 	{
 		z1.stop();
 	  
-		$('#diagram').animate({ top: '0' },4000);		
+		/* $('#diagram').animate({ top: '0' },4000);		
 		
 		 window.setInterval(function(){
 				$("#diagram").css({ "position": "initial"});
-				}, 4000);
+				}, 4000); */
+		 $('#diagram').animate({
+        'marginTop' : "-=230px" //moves down
+        },2000);		
 				
 		stopAnimation();
 		focusAll();
@@ -204,12 +222,6 @@ $('#maintext').css( 'cursor', 'pointer' );
 	
 	
 
-$('#circletext').click(function() {
- $("#diagram").css({ "position": "absolute"});
-	$('#diagram').animate({ top: '230px' },4000);
-	rotateAll();
-  
-});
 
 	
 

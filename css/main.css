@@ -1,0 +1,22 @@
+
+
+.cellBorderPurple
+{
+    border-top-color: #8E4D67 !important;
+	border-bottom-color: #8E4D67 !important;
+    border-width: 2px !important;
+}
+
+.bold{
+font-weight: 600;
+}
+
+.blue{
+color:#10907F;
+    font-weight: 600;
+}
+
+.userName
+{
+    font-size: 0.8em;padding-left: 5%;padding-top: 2px;font-weight: 600;color:rgba(101, 101, 101, 0.83);
+}
