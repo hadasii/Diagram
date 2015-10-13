@@ -29,7 +29,7 @@ var o = {
 
 		var /* r = Raphael('diagram', 600, 600), */
 			rad = 20,
-			defaultText = 'PLAY',
+			defaultText = 'REC',
 			speed = 500;
 		
 		var circle = r.circle('50%', '50%', '8%').attr({ stroke: 'none', fill: '#19aa5f' });
@@ -37,7 +37,7 @@ var o = {
 		
 		 
 		 title = r.text(300, 300, defaultText).attr({
-			font: '1.7em Arial ',
+			font: '1.95em Arial ',
 			fill: '#fff',			
 		}).attr({ "font-weight": "800" }).toFront();
 		

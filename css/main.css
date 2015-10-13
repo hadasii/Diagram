@@ -1,10 +1,64 @@
 
 
-.cellBorderPurple
+.rowBorderPurple 
 {
-    border-top-color: #8E4D67 !important;
-	border-bottom-color: #8E4D67 !important;
+   /*  border-top-color: rgba(164, 25, 80, 0.76) !important ;
     border-width: 2px !important;
+ 	background-color:rgba(164, 25, 80, 0.52) !important ;  
+	border-bottom:2px solid rgba(164, 25, 80, 0.76)  !important; */
+	
+	margin-bottom: 3px;
+	border: 3px solid rgba(164, 25, 80, 0.76) !important;
+	border-bottom: 3px solid rgba(164, 25, 80, 0.76) !important;
+	border-radius: 10px;
+}
+
+.rowBorderPink
+{
+	/* border-top:4px solid  rgba(224, 28, 64, 0.87) !important;
+	background-color:rgba(224, 28, 64, 0.63) !important;
+	border-bottom:2px solid  rgba(224, 28, 64, 0.87) !important;*/
+	margin-bottom: 3px;
+	border: 3px solid rgba(224, 28, 64, 0.87) !important;
+	border-bottom: 3px solid rgba(224, 28, 64, 0.87) !important;
+	border-radius: 10px;
+}
+
+
+.rowBorderOrange 
+{
+   
+	/*border-top:2px solid  rgba(254, 89, 21, 0.75) !important;
+	border-bottom:2px solid  rgba(254, 89, 21, 0.75) !important;
+	background-color:rgba(254, 89, 21, 0.64) !important;*/
+	margin-bottom: 3px;
+	border: 3px solid rgba(254, 89, 21, 0.75) !important;
+	border-bottom: 3px solid rgba(254, 89, 21, 0.75) !important;
+	border-radius: 10px;
+}
+
+.rowBorderYellow
+{
+    /*border-top:2px solid  rgba(255, 158, 41, 0.82) !important;
+	border-bottom:2px solid   rgba(255, 158, 41, 0.82) !important;
+	background-color:rgba(255, 158, 41, 0.69)  !important;*/
+	margin-bottom: 3px;
+	border: 3px solid rgba(255, 158, 41, 0.82) !important;
+	border-bottom: 3px solid rgba(255, 158, 41, 0.82) !important;
+	border-radius: 10px;
+}
+
+.rowBorderBlue
+{
+    /*border-top:2px solid  rgba(0, 145, 126, 0.84) !important;
+	border-bottom:2px solid  rgba(0, 145, 126, 0.84) !important;
+    background-color:rgba(0, 145, 126, 0.58) !important;*/
+	
+	margin-bottom: 20px;
+	border: 3px solid rgba(0, 145, 126, 0.84) !important;
+	border-bottom: 3px solid rgba(0, 145, 126, 0.84) !important;
+	border-radius: 10px;
+	
 }
 
 .bold{
@@ -18,5 +72,21 @@ color:#10907F;
 
 .userName
 {
-    font-size: 0.8em;padding-left: 5%;padding-top: 2px;font-weight: 600;color:rgba(101, 101, 101, 0.83);
+    font-size: 0.85em;    color: rgba(84, 83, 83, 0.83);
+}
+
+.listend
+{
+        margin-top: -10px;font-size: 0.8em;color:rgba(115, 108, 108, 0.83);
+}
+
+
+
+body
+{
+   color: black !important;
+     background-image: url("../images/i2.png") ;
+     background-repeat:     no-repeat;
+	background-size:100% auto; 
+	
 }
