@@ -7,22 +7,48 @@
  	background-color:rgba(164, 25, 80, 0.52) !important ;  
 	border-bottom:2px solid rgba(164, 25, 80, 0.76)  !important; */
 	
-	margin-bottom: 0.5px;
+	
 	border: 5px solid rgba(164, 25, 80, 0.76) !important;
 	border-bottom: 5px solid rgba(164, 25, 80, 0.76) !important;
 	border-radius: 10px;
+	    margin-top: -11px;
+	color: rgb(164, 25, 80);
+	    height: 100%;
 }
+
+.rowBorderPurple  a
+{
+ color: rgba(164, 25, 80, 0.88);
+}
+
+.rowBorderPurple a:hover {
+    text-decoration:none !important;
+	}
+
 
 .rowBorderPink
 {
 	/* border-top:4px solid  rgba(224, 28, 64, 0.87) !important;
 	background-color:rgba(224, 28, 64, 0.63) !important;
 	border-bottom:2px solid  rgba(224, 28, 64, 0.87) !important;*/
-	margin-bottom: 1px;
+	
 	border: 5px solid rgba(224, 28, 64, 0.87) !important;
 	border-bottom: 5px solid rgba(224, 28, 64, 0.87) !important;
 	border-radius: 10px;
+	    margin-top: -11px;
+	color: rgb(224, 28, 64);
+    height: 100%;
 }
+
+.rowBorderPink  a
+{
+color: rgb(224, 28, 64);
+}
+.rowBorderPink a:hover {
+    text-decoration:none !important;
+	}
+
+
 
 
 .rowBorderOrange 
@@ -31,35 +57,99 @@
 	/*border-top:2px solid  rgba(254, 89, 21, 0.75) !important;
 	border-bottom:2px solid  rgba(254, 89, 21, 0.75) !important;
 	background-color:rgba(254, 89, 21, 0.64) !important;*/
-	margin-bottom: 1px;
+	    
 	border: 5px solid rgba(254, 89, 21, 0.75) !important;
 	border-bottom: 5px solid rgba(254, 89, 21, 0.75) !important;
 	border-radius: 10px;
+	
+	color: rgb(254, 89, 21);
+	    height: 100%;
 }
 
+.rowBorderOrange  a
+{
+color: rgb(254, 89, 21);
+}
+
+.rowBorderOrange a:hover {
+    text-decoration:none !important;
+	}
+
+	
 .rowBorderYellow
 {
     /*border-top:2px solid  rgba(255, 158, 41, 0.82) !important;
 	border-bottom:2px solid   rgba(255, 158, 41, 0.82) !important;
 	background-color:rgba(255, 158, 41, 0.69)  !important;*/
-	margin-bottom: 1px;
+	   
 	border: 5px solid rgba(255, 158, 41, 0.82) !important;
 	border-bottom: 5px solid rgba(255, 158, 41, 0.82) !important;
 	border-radius: 10px;
+	
+	color: rgb(255, 158, 41);
+	    height: 100%;
 }
 
+.rowBorderYellow  a
+{
+color: rgb(255, 158, 41);
+}
+
+.rowBorderYellow a:hover {
+    text-decoration:none !important;
+	}
+
+	
 .rowBorderBlue
 {
     /*border-top:2px solid  rgba(0, 145, 126, 0.84) !important;
 	border-bottom:2px solid  rgba(0, 145, 126, 0.84) !important;
     background-color:rgba(0, 145, 126, 0.58) !important;*/
 	
-	margin-bottom: 45px;
+	   
 	border: 5px solid rgba(0, 145, 126, 0.84) !important;
 	border-bottom: 5px solid rgba(0, 145, 126, 0.84) !important;
 	border-radius: 10px;
 	
+	color: rgb(0, 145, 126);
+	    height: 100%;
 }
+
+.rowBorderBlue  a
+{
+color:  rgb(0, 145, 126);
+}
+
+.rowBorderBlue a:hover {
+    text-decoration:none !important;
+	}
+
+
+
+.rowBorderDarkBlue
+{
+    /*border-top:2px solid  rgba(0, 145, 126, 0.84) !important;
+	border-bottom:2px solid  rgba(0, 145, 126, 0.84) !important;
+    background-color:rgba(0, 145, 126, 0.58) !important;*/
+	
+	  
+	border: 5px solid #1E7A89 !important;
+	border-bottom: 5px solid #1E7A89 !important;
+	border-radius: 10px;
+	
+	color: #1E7A89;
+	    height: 100%;
+}
+
+.rowBorderDarkBlue  a
+{
+color: #1E7A89;
+}
+
+.rowBorderDarkBlue a:hover {
+    text-decoration:none !important;
+	}
+
 
 .navbar-header {
  	float:none;
@@ -90,25 +180,7 @@
     color:rgba(18, 157, 180, 0.97) !important;
 	}
 	
-.fa-download:hover{
-    color:rgba(18, 157, 180, 0.97) !important;
-	}	
-	
-#facebook:hover{
-    color:#43609c !important;
-	}
-	
-.fa-facebook:hover{
-    color:#43609c !important;
-	}	
 
-	#whatsapp:hover{
-    color:#189d0e !important;
-	}
-	
-.fa-whatsapp:hover{
-    color:#189d0e !important;
-	}	
 	
 	
 
@@ -147,11 +219,36 @@ color:#10907F;
 body
 {
    color: black !important;
-     background-image: url("../images/i3.png") ;
-     background-repeat:     no-repeat;
+   
 	background-size:100% auto; 
 	
 }
+
+.search
+{
+ 
+}
+
+
+.right-inner-addon {
+    position: relative;
+}
+
+.right-inner-addon input {
+    padding-right: 30px;    
+}
+
+.right-inner-addon i {
+    position: absolute;
+    right: 0px;
+    padding: 10px 12px;
+    pointer-events: none;
+}
+
+.form-control::-webkit-input-placeholder { color: #348796; }
+.form-control:-moz-placeholder { color: #348796; }
+.form-control::-moz-placeholder { color: #348796; }
+.form-control:-ms-input-placeholder { color: #348796; }
 
 
 
