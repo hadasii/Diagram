@@ -13,7 +13,7 @@
 	border-radius: 10px;
 	    margin-top: -11px;
 	color: rgb(164, 25, 80);
-	    height: 100%;
+	  
 }
 
 .rowBorderPurple  a
@@ -37,7 +37,7 @@
 	border-radius: 10px;
 	    margin-top: -11px;
 	color: rgb(224, 28, 64);
-    height: 100%;
+   
 }
 
 .rowBorderPink  a
@@ -63,7 +63,7 @@ color: rgb(224, 28, 64);
 	border-radius: 10px;
 	
 	color: rgb(254, 89, 21);
-	    height: 100%;
+	   
 }
 
 .rowBorderOrange  a
@@ -87,7 +87,7 @@ color: rgb(254, 89, 21);
 	border-radius: 10px;
 	
 	color: rgb(255, 158, 41);
-	    height: 100%;
+	   
 }
 
 .rowBorderYellow  a
@@ -112,7 +112,7 @@ color: rgb(255, 158, 41);
 	border-radius: 10px;
 	
 	color: rgb(0, 145, 126);
-	    height: 100%;
+	   
 }
 
 .rowBorderBlue  a
@@ -138,7 +138,7 @@ color:  rgb(0, 145, 126);
 	border-radius: 10px;
 	
 	color: #1E7A89;
-	    height: 100%;
+	  
 }
 
 .rowBorderDarkBlue  a
@@ -218,9 +218,7 @@ color:#10907F;
 
 body
 {
-   color: black !important;
-   
-	background-size:100% auto; 
+   color: black !important;  
 	
 }
 
@@ -286,4 +284,20 @@ body
         width: 20%;
         float: left;
     }
+}
+
+
+.col-xs-6.no-float{
+    float: none; 
+	display: table-cell;
+}
+
+html,body,.container,.container-fluid,.#wrap
+{
+    height:100% !important;
+}
+
+*
+{
+    margin:0;padding:0;
 }
