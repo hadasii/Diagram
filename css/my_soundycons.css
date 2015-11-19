@@ -2,7 +2,8 @@
 
 .rowBorderPurple 
 {
-   
+   margin: 1px;
+    padding: 1px;
 	margin-bottom: 0.5px;
 	border: 5px solid rgba(164, 25, 80, 0.76) !important;
 	border-bottom: 5px solid rgba(164, 25, 80, 0.76) !important;
@@ -11,7 +12,8 @@
 
 .rowBorderPink
 {
-	
+	margin: 1px;
+    padding: 1px;
 	margin-bottom: 1px;
 	border: 5px solid rgba(224, 28, 64, 0.87) !important;
 	border-bottom: 5px solid rgba(224, 28, 64, 0.87) !important;
@@ -22,7 +24,8 @@
 .rowBorderOrange 
 {
    
-
+margin: 1px;
+    padding: 1px;
 	margin-bottom: 1px;
 	border: 5px solid rgba(254, 89, 21, 0.75) !important;
 	border-bottom: 5px solid rgba(254, 89, 21, 0.75) !important;
@@ -31,7 +34,8 @@
 
 .rowBorderYellow
 {
-   
+   margin: 1px;
+    padding: 1px;
 	margin-bottom: 1px;
 	border: 5px solid rgba(255, 158, 41, 0.82) !important;
 	border-bottom: 5px solid rgba(255, 158, 41, 0.82) !important;
@@ -40,7 +44,8 @@
 
 .rowBorderBlue
 {
-   
+   margin: 1px;
+    padding: 1px;
 	margin-bottom: 1px;
 	border: 5px solid rgba(0, 145, 126, 0.84) !important;
 	border-bottom: 5px solid rgba(0, 145, 126, 0.84) !important;
@@ -51,7 +56,8 @@
 
 .rowBorderDarkBlue
 {
-  
+  margin: 1px;
+    padding: 1px;
 	border: 5px solid #1E7A89 !important;
 	border-bottom: 5px solid #1E7A89 !important;
 	border-radius: 10px;
@@ -146,10 +152,8 @@ color:#10907F;
 body
 {
    color: black !important;
-    
-	
-}
-
+    overflow: hidden; 
+	}
 
 
 .col-xs-5ths,
@@ -188,23 +192,10 @@ body
     }
 }
 
-.tab-content {overflow-x:hidden; }
 
-.slide {
-  -webkit-transition: left 0.35s ease;
-  -moz-transition: left 0.35s ease;
-  -ms-transition: left 0.35s ease;
-  -o-transition: left 0.35s ease;
-  transition: left 0.35s ease;
-  position: relative;
-  overflow-x:hidden;
-  left:100%;
+.ui-tabs-panel {
+    
+    overflow-y: auto; 
+    overflow-x: hidden; 
 }
-.slide.in {
-    left:0;
-}
-.slide.out{
-    left:-100%;
-}
-
 
