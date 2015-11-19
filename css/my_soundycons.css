@@ -199,3 +199,17 @@ body
     overflow-x: hidden; 
 }
 
+.ui-page-theme-a .ui-btn.ui-btn-active
+{
+background-color: rgb(74, 178, 195);
+    border-color: rgba(35, 157, 177, 0.97);
+	color:white !important;
+   
+   
+}
+
+.ui-page-theme-a .ui-btn:focus
+{
+box-shadow:0 0 5px rgba(35, 157, 177, 0.97);
+color:white;
+}
