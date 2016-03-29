@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Diagrams</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="css/default.css" rel="stylesheet" type="text/css" />
 		
 		<link href="http://fonts.googleapis.com/css?family=Cabin+Sketch:bold" rel="stylesheet" type="text/css" />
@@ -32,7 +33,7 @@
 		<link href="css/main.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-	
+	<div data-role="page" id="index">
 	    <div class="navbar navbar-default" role="navigation" style="height: 40px; ">
       <div class="container-fluid " style="margin: 0px;padding: 0px;" >
 		
@@ -210,48 +211,13 @@
 		<div class="container-fluid containerFooter" style="text-align: center; padding: 0px;margin: 0px;">
 		
 		 <div class="row" id="bottomNav">
-		 <div class="col-xs-5ths "><a href="#" data-transition="fade"><i class="glyphicon glyphicon-home"></i><p style=   "font-size: 0.5em;">Home</p></a></div>
-		 <div class="col-xs-5ths"><a href="my_soundycons.html"  data-transition="fade"><i class="glyphicon glyphicon-headphones"></i><p style=   "font-size: 0.5em;">Soundycons</p></a></div>
-		 <div class="col-xs-5ths "><a href="#" data-transition="fade"><i class="glyphicon glyphicon-user"></i><p style=   "font-size: 0.5em;">Profile</p></a></div>
-		 <div class="col-xs-5ths "><a href="#" data-transition="fade"><i class="glyphicon glyphicon-globe"></i><p style=   "font-size: 0.5em;">Trending</p></a></div>
-		 <div class="col-xs-5ths "><a href="#" data-transition="fade"><i class="glyphicon glyphicon-search"></i><p style=   "font-size: 0.5em;">Search</p></a></div>
-		 
-	     </div>
-	
-		
-		
-	
-		
-					<!-- <div class="row" style="display: inline-flex;    width: 100%;">
-						<div class="col-xs-12" style="text-align: center; display: inline-flex;"  >
-											
-							<div style="text-align: center;"  >					
-							<img src="images/home2.png" class="img-responsive" style="margin: 0 auto;" >
-							<p style="font-size: 0.7em;color: rgba(148, 148, 148, 0.78);"> Home</p>
-							</div>							
-							<div style="text-align: center; "  >										
-							<img src="images/music.png" class="img-responsive" style="margin: 0 auto;" >
-							<p style="font-size: 0.7em;color: rgba(148, 148, 148, 0.78);"> Soundycons</p>
-							</div>							
-							<div style="text-align: center; "  >	
-							<img src="images/profile2.png" class="img-responsive" style="margin: 0 auto;" >
-							<p style="font-size: 0.7em;color: rgba(148, 148, 148, 0.78);"> Profile</p>
-							</div>							
-							<div style="text-align: center; "  >	
-							<img src="images/network3.png" class="img-responsive" style="margin: 0 auto;" >
-							<p style="font-size: 0.7em;color: rgba(148, 148, 148, 0.78);"> Trending</p>
-							</div>							
-							<div style="text-align: center;"  >						  																								
-							<img src="images/search2.png" class="img-responsive" style="margin: 0 auto;" >
-							<p style="font-size: 0.7em;color: rgba(148, 148, 148, 0.78);"> Search</p>
-							</div>
-						</div>
-						
-						
-											
-					</div>
-				 -->
-		
+				 <div class="col-xs-5ths"> <a class="indexPage" ><i class="glyphicon glyphicon-home"></i><p style=   "font-size: 0.5em;">Home</p></a></div>
+				 <div class="col-xs-5ths"> <a class="mySoundyconsPage" ><i class="glyphicon glyphicon-headphones"></i><p style=   "font-size: 0.5em;">Soundycons</p></a></div>
+				 <div class="col-xs-5ths"> <a class="indexPage" ><i class="glyphicon glyphicon-user"></i><p style=   "font-size: 0.5em;">Profile</p></a></div>
+				 <div class="col-xs-5ths"> <a class="indexPage" ><i class="glyphicon glyphicon-globe"></i><p style=   "font-size: 0.5em;">Trending</p></a></div>
+				 <div class="col-xs-5ths"> <a class="searchPage" ><i class="glyphicon glyphicon-search"></i><p style=   "font-size: 0.5em;">Search</p></a></div>		 
+		 </div>
+			 
 		</div>
     </div>
 
@@ -284,6 +250,30 @@
 		</div>
 		
 		
-
+	</div>
     </body>
 	</html>
+	
+<script>
+
+    $(document).bind("pageinit", function() {
+		$(".indexPage").click(function(e) {
+		    event.preventDefault();
+			$.mobile.navigate( "index.html", { transition: "slideup", changeHash: false ,reloadPage: true});
+			
+		});
+		
+		 $(".mySoundyconsPage").click(function(e) {
+		  event.preventDefault();
+			$.mobile.navigate( "my_soundycons.html", { transition: "slideup", changeHash: false,reloadPage: true });
+			
+		});
+		
+		 $(".searchPage").click(function(e) {
+		  event.preventDefault();
+			$.mobile.navigate( "search.html", { transition: "slideup", changeHash: false,reloadPage: true });
+			
+		});
+	});
+	
+</script>	

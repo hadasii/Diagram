@@ -3,6 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<title>Diagrams</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="css/default.css" rel="stylesheet" type="text/css" />
 		
 		<link href="http://fonts.googleapis.com/css?family=Cabin+Sketch:bold" rel="stylesheet" type="text/css" />
@@ -30,7 +31,7 @@
 		<link href="css/my_soundycons.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-	
+	<div data-role="page" id="my_soundycons">
 	    <div class="navbar navbar-default" role="navigation" style="height: 40px;     margin-bottom: 0px;">
 		  <div class="container-fluid " style="margin: 0px;padding: 0px;" >		
 				<div class="row" style="width: 100%;margin: 0px;padding: 0px;">
@@ -38,7 +39,7 @@
 						<img src="images/soundycon.png" class="img-responsive"  style="float:left;padding-top: 8px;    height: 50px;">
 					</div>
 					<div class="col-xs-6" style="text-align:center">
-					  <p style=" color:#756D6D;font-size: 1.3em;margin-top: 20px;">  Soundycons</p>
+					  <p style=" color: #348799;font-size: 1em;margin-top: 20px;">  Soundycons</p>
 					</div>
 					<div class="col-xs-3" style="padding-right: 0px;">
 						
@@ -57,8 +58,8 @@
 				<div data-role="tabs" id="tabs">
 				  <div class="tabs" data-role="navbar" data-iconpos="left">
 					<ul>
-					  <li id="my_soundycons"><a data-transition="pop"id="my_soundycons_a"style="color: #FFFFFF;font-size: 1.1em;" href="#soundycons" class="ui-btn-active">My Soundycons</a></li>
-					  <li id="my_downloaded"><a data-transition="pop"id="my_downloaded_a" style="color: #ADADAD;font-size: 1.1em;" href="#downloaded">Downloaded</a></li>			
+					  <li id="my_soundycons"><a data-transition="slide"id="my_soundycons_a"style="color: #ADADAD ;font-size: 1.1em;" href="#soundycons" class="ui-btn-active">My Soundycons</a></li>
+					  <li id="my_downloaded"><a data-transition="slide"id="my_downloaded_a" style="color: #ADADAD ;font-size: 1.1em;" href="#downloaded">Downloaded</a></li>			
 					</ul>
 					
 					
@@ -484,45 +485,67 @@
 	<div class="col-xs-12 navbar-default navbar-fixed-bottom" style="padding: 0px;margin: 0px;">
 		<div class="container-fluid containerFooter" style="text-align: center; padding: 0px;margin: 0px;">		
 			 <div class="row" id="bottomNav">
-				 <div class="col-xs-5ths "><a href="index.html" data-transition="fade"><i class="glyphicon glyphicon-home"></i><p style=   "font-size: 0.5em;">Home</p></a></div>
-				 <div class="col-xs-5ths"><a href="my_soundycons.html"  data-transition="fade"><i class="glyphicon glyphicon-headphones"></i><p style=   "font-size: 0.5em;">Soundycons</p></a></div>
-				 <div class="col-xs-5ths "><a href="#" data-transition="fade"><i class="glyphicon glyphicon-user"></i><p style=   "font-size: 0.5em;">Profile</p></a></div>
-				 <div class="col-xs-5ths "><a href="#" data-transition="fade"><i class="glyphicon glyphicon-globe"></i><p style=   "font-size: 0.5em;">Trending</p></a></div>
-				 <div class="col-xs-5ths "><a href="#" data-transition="fade"><i class="glyphicon glyphicon-search"></i><p style=   "font-size: 0.5em;">Search</p></a></div>		 
-			 </div>
+				 <div class="col-xs-5ths"> <a class="indexPage" ><i class="glyphicon glyphicon-home"></i><p style=   "font-size: 0.5em;">Home</p></a></div>
+				 <div class="col-xs-5ths"> <a class="mySoundyconsPage" ><i class="glyphicon glyphicon-headphones"></i><p style=   "font-size: 0.5em;">Soundycons</p></a></div>
+				 <div class="col-xs-5ths"> <a class="indexPage" ><i class="glyphicon glyphicon-user"></i><p style=   "font-size: 0.5em;">Profile</p></a></div>
+				 <div class="col-xs-5ths"> <a class="indexPage" ><i class="glyphicon glyphicon-globe"></i><p style=   "font-size: 0.5em;">Trending</p></a></div>
+				 <div class="col-xs-5ths"> <a class="searchPage" ><i class="glyphicon glyphicon-search"></i><p style=   "font-size: 0.5em;">Search</p></a></div>		 
+			</div>
 		</div>
     </div>
 
+	</div>
     </body>
 	</html>
 	
 	<script>
-	//$('.tabs').tabs({show: 'fade', hide: 'fade'});  
-	$( document ).ready(function() {
-    $(".ui-tabs-panel").css("height",document.documentElement.clientHeight);
+	
+	
+	
+	$(document).bind("pageinit", function() {
+	 $(".ui-tabs-panel").css("height",document.documentElement.clientHeight);
+	 
+	 $( "#my_soundycons" ).focusin(function() {
+	   $( "#my_soundycons_a" ).css( "color", "#FFFFFF" );
+	});
+
+	$( "#my_soundycons" ).focusout(function() {
+	   $( "#my_soundycons_a").css( "color", "#ADADAD" );
+	});
+
+	$( "#my_downloaded" ).focusin(function() {
+	   $( "#my_downloaded_a").css( "color", "#FFFFFF" );
+	});
+
+	$( "#my_downloaded" ).focusout(function() {
+	   $( "#my_downloaded_a").css( "color", "#ADADAD" );
+	});
+
+   $(".indexPage").click(function(e) {
+    event.preventDefault();
+        $.mobile.navigate( "index.html", { transition: "slideup", changeHash: false });
+    });
+	
+	 $(".mySoundyconsPage").click(function(e) {
+	  event.preventDefault();
+        $.mobile.navigate( "my_soundycons.html", { transition: "slideup", changeHash: false });
+    });
+	
+	 $(".searchPage").click(function(e) {
+	  event.preventDefault();
+        $.mobile.navigate( "search.html", { transition: "slideup", changeHash: false });
+    });
+	
 	});
 
 	
 	$(document).on("tabsbeforeactivate", "#tabs", function (e, ui) {	
-    $(ui.newPanel).addClass("in pop").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-        $(this).removeClass("in pop");
+    $(ui.newPanel).addClass("in slide").one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        $(this).removeClass("in slide");
     });
-});
+	});
 
-	$( "#my_soundycons" ).focusin(function() {
-   $( "#my_soundycons_a" ).css( "color", "#FFFFFF" );
-});
+	
 
-$( "#my_soundycons" ).focusout(function() {
-   $( "#my_soundycons_a").css( "color", "#ADADAD" );
-});
-
-$( "#my_downloaded" ).focusin(function() {
-   $( "#my_downloaded_a").css( "color", "#FFFFFF" );
-});
-
-$( "#my_downloaded" ).focusout(function() {
-   $( "#my_downloaded_a").css( "color", "#ADADAD" );
-});
 
 	</script>

@@ -147,10 +147,21 @@ color:#10907F;
 body
 {
    color: black !important;
-     background-image: url("../images/i3.png") ;
-     background-repeat:     no-repeat;
-	background-size:100% auto; 
+
 	
+}
+
+.ui-mobile-viewport{
+    background: url("../images/i3.png") ;
+    background-size:100% auto !important;
+	background-repeat:     no-repeat;
+	 color: black !important;
+}
+.ui-page{
+    background:none;
+}
+.ui-overlay-a{
+   
 }
 
 
